@@ -26,11 +26,11 @@ First run in a session: tell the user in 3 lines what you need from them (`refer
 ## 1. Every route follows the same spine
 
 1. **Pin** — symptom in technical words, where it shows up, and a binary *done-when*. Missing and not derivable → ask (max 3 questions).
-2. **Understand before touching** — read the repo's README/CONTRIBUTING/AGENTS.md/CLAUDE.md, find the files involved, grep **every caller** of what you will change. Say the blast radius out loud.
+2. **Understand before touching** — read the repo's README/CONTRIBUTING/AGENTS.md/CLAUDE.md, find the files involved, grep **every caller** of what you will change. Say the blast radius out loud. Then **self-grill** questions 1–18 (`references/self-grill.md`).
 3. **Reproduce** — on a fresh default branch. A failing test (or a command whose output shows the bug) before any fix. Can't reproduce → stop and report; don't guess-fix.
 4. **Smallest correct fix** — `references/fix-quality.md`: acceptance list, is a change needed at all, classify, root cause where every caller routes through, siblings, then the ladder (nothing → existing helper → stdlib → installed dep → one line → minimum code).
 5. **Prove** — the repo's own lint/format/type/test commands, base reproduces, one case per acceptance item plus edges, a **mutation check** (break the fix, a case fails), parity on warnings.
-6. **Review yourself** — `references/review.md`. Fix what is real and in scope.
+6. **Review yourself** — the full self-grill again (all 29, answered from this run's output), then `references/review.md`. Fix what is real and in scope. PRs follow `references/pr-craft.md`; why each rule exists is in `references/research.md`.
 7. **Gate** — `references/gates.md`. Nothing outward-facing without the user's yes.
 8. **Explain** — `references/explain.md`: short, plain, the format the user can paste to a reviewer.
 9. **Log** — `references/logging.md`: one run file, outside the repo.
