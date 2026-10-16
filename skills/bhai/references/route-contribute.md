@@ -4,6 +4,8 @@ Goal: one merge-worthy PR the maintainers would have wanted, or an honest "nothi
 
 ## 1. Measure the repo before touching code
 
+Do `merge-readiness.md` §1 in full; the short version is below.
+
 ```bash
 gh repo view <r> --json defaultBranchRef,isArchived,stargazerCount
 gh pr list -R <r> --state merged --limit 60 --json number,title,author,additions,deletions,files,mergedAt,createdAt,mergedBy
@@ -37,6 +39,8 @@ environment cannot run everything, and say so.
 
 - Branch `fix/<short-name>` from the fresh default branch; one commit per logical change, in the repo's title style.
 - Write the PR body in the repo's measured style: problem with a reproduction, the fix, tests run (quoted), scope.
-- Show the user the explanation (`explain.md`) and the PR draft. Open it only after their yes.
+- Run `merge-readiness.md` §2–3 (local CI, fresh merge of the default branch, re-search for duplicates).
+- Show the user the explanation (`explain.md`) and the PR draft. Open it only after their yes — or, in `--auto` mode,
+  open it without stopping when every gate passed (`user-contract.md`).
 - After opening: read every bot review in full; fix real findings in new commits with a test and reply on that thread;
   never answer a human reviewer without the user's approval; never ping maintainers.
