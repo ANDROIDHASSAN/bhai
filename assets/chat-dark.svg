@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="560" viewBox="0 0 860 560" role="img" aria-label="A chat: you send 'bhai ye repo dekh le' with a repo link. bhai replies step by step: measured the repo, found a bug, wrote a failing test, fixed it with all checks green, and asks whether to open the PR. You reply 'haan'.">
+<style>
+.f{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.bg{fill:#0b141a}.hd{fill:#1f2c34}.nm{fill:#e9edef;font-size:17px;font-weight:600}.st{fill:#3fb950;font-size:12.5px}
+.me{fill:#005c4b}.bh{fill:#1f2c34}.tx{fill:#e9edef;font-size:14.5px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;fill:#7ee787}
+.tm{fill:#8696a0;font-size:11px}.tick{fill:none;stroke:#53bdeb;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.av{fill:#3fb950}.avt{fill:#0b141a;font-family:ui-monospace,Menlo,monospace;font-size:20px;font-weight:700}
+.m{opacity:0;animation:in 20s infinite}
+@keyframes in{0%{opacity:0;transform:translateY(8px)}2%{opacity:1;transform:translateY(0)}90%{opacity:1}95%,100%{opacity:0}}
+.dots{opacity:0;animation:typ 20s infinite}
+@keyframes typ{0%{opacity:0}1%{opacity:1}9%{opacity:1}10%,100%{opacity:0}}
+.d{animation:dd 1s infinite}@keyframes dd{0%,100%{opacity:.25}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.m{animation:none;opacity:1}.dots{display:none}}
+</style>
+<g class="f">
+<rect width="860" height="560" rx="18" class="bg"/>
+<rect width="860" height="64" rx="18" class="hd"/><rect y="40" width="860" height="24" class="hd"/>
+<circle cx="44" cy="32" r="20" class="av"/><text x="44" y="39" text-anchor="middle" class="avt">&gt;_</text>
+<text x="76" y="29" class="nm">bhai</text><text x="76" y="47" class="st">online · reproduces first, pushes only on your yes</text>
+
+<g class="m" style="animation-delay:.3s"><rect x="438" y="84" width="398" height="56" rx="12" class="me"/>
+<text x="452" y="108" class="tx">bhai ye repo dekh le</text><text x="452" y="128" class="mono">github.com/KoljaB/RealtimeSTT</text>
+<text x="770" y="131" class="tm">9:41</text><path class="tick" d="M800 126l3 3 6-7M806 126l3 3 6-7"/></g>
+
+<g class="dots" style="animation-delay:1.2s"><rect x="24" y="154" width="70" height="34" rx="12" class="bh"/>
+<circle class="d" cx="44" cy="171" r="4" fill="#8696a0"/><circle class="d" cx="59" cy="171" r="4" fill="#8696a0" style="animation-delay:.2s"/><circle class="d" cx="74" cy="171" r="4" fill="#8696a0" style="animation-delay:.4s"/></g>
+
+<g class="m" style="animation-delay:3s"><rect x="24" y="154" width="520" height="56" rx="12" class="bh"/>
+<text x="38" y="178" class="tx">repo dekh liya: 34 merged PRs, 31 bahar walon ke,</text><text x="38" y="198" class="tx">median 16.5 lines, ~7.4 h mein merge. "fix: …" style.</text></g>
+
+<g class="m" style="animation-delay:4.8s"><rect x="24" y="220" width="520" height="56" rx="12" class="bh"/>
+<text x="38" y="244" class="tx">bug mila: client <tspan class="mono">language=""</tspan> bhejta hi nahi,</text><text x="38" y="264" class="tx">server "en" pe atak jaata hai. auto-detect kabhi nahi hota.</text></g>
+
+<g class="m" style="animation-delay:6.6s"><rect x="24" y="286" width="520" height="36" rx="12" class="bh"/>
+<text x="38" y="309" class="tx">test likha → <tspan fill="#f85149">master pe fail ✗</tspan> (sahi, bug real hai)</text></g>
+
+<g class="m" style="animation-delay:8.4s"><rect x="24" y="332" width="520" height="56" rx="12" class="bh"/>
+<text x="38" y="356" class="tx">fix + test: <tspan fill="#3fb950">+32</tspan> <tspan fill="#f85149">−1</tspan>, 2 files. repo tests ✓ negative control ✓</text><text x="38" y="376" class="tx">master merge kiya, koi conflict nahi ✓  no secrets ✓</text></g>
+
+<g class="m" style="animation-delay:10.2s"><rect x="24" y="398" width="520" height="56" rx="12" class="bh"/>
+<text x="38" y="422" class="tx">PR draft ready. reviewer pooche to bolna:</text><text x="38" y="442" class="tx">"server default badalna breaking change hota". khol dun?</text></g>
+
+<g class="m" style="animation-delay:12.4s"><rect x="676" y="472" width="160" height="42" rx="12" class="me"/>
+<text x="692" y="498" class="tx">haan bhai!</text><text x="770" y="505" class="tm">9:43</text><path class="tick" d="M800 500l3 3 6-7M806 500l3 3 6-7"/></g>
+</g>
+</svg>

@@ -7,6 +7,17 @@
 
 <h3 align="center">Paste a repo, a ticket, or a sentence.<br>It reproduces the bug, makes the smallest fix, proves it, and tells you how to defend it.</h3>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1100&color=3FB950&center=true&vCenter=true&width=720&lines=%2Fbhai+github.com%2Fowner%2Frepo+%E2%86%92+a+real+bug%2C+fixed%2C+PR+drafted;%2Fbhai+ABC-123+%E2%86%92+ticket+solved+at+the+root+cause;%2Fbhai+add+retry+to+the+uploader+%E2%86%92+done%2C+and+proven;%2Fbhai+status+%E2%86%92+your+open+PRs%2C+looked+after" alt="/bhai repo → a real bug, fixed, PR drafted · /bhai ticket → solved at the root cause · /bhai task → done and proven · /bhai status → your open PRs looked after">
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/chat-dark.svg">
+    <img src="assets/chat-light.svg" alt="A chat with bhai: you send a repo link, bhai measures the repo, finds a bug, writes a failing test, fixes it with every check green, and asks before opening the PR" width="100%">
+  </picture>
+</p>
+
 <p align="center"><em>Bhai, bas bol de.</em></p>
 
 <p align="center">
@@ -16,18 +27,15 @@
   <img src="https://img.shields.io/badge/license-MIT-f2cc60?style=flat-square" alt="MIT">
 </p>
 
-<p align="center">
-  <img src="assets/demo.svg" alt="/bhai on a repo link: measures the repo, reproduces a bug with a failing test, fixes it, runs the checks, and explains the change" width="100%">
-  <br><sub>Illustration built from a real merged fix, <a href="https://github.com/KoljaB/RealtimeSTT/pull/332">RealtimeSTT #332</a>, with that repo's measured numbers.</sub>
-</p>
+<p align="center"><sub>Chat and terminal are illustrations built from a real merged fix, <a href="https://github.com/KoljaB/RealtimeSTT/pull/332">RealtimeSTT #332</a>, with that repo's measured numbers.</sub></p>
 
 <p align="center">
-  <a href="#install">Install</a> · <a href="#one-command-four-jobs">What it does</a> · <a href="#why-it-doesnt-break-things">Safety</a> · <a href="#faq">FAQ</a>
+  <a href="#-install">Install</a> · <a href="#-one-command-four-jobs">What it does</a> · <a href="#-the-best-fix-is-the-shortest-correct-one">The fix</a> · <a href="#-why-it-doesnt-break-things">Safety</a> · <a href="#-faq">FAQ</a>
 </p>
 
----
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg"><img src="assets/divider-light.svg" alt="" width="100%"></picture>
 
-## Install
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="28"> Install
 
 ```bash
 claude plugin marketplace add ANDROIDHASSAN/bhai
@@ -36,7 +44,7 @@ claude plugin install bhai@bhai
 
 Then, in any repo: `/bhai <a link or a sentence>`.
 
-## One command, four jobs
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="28"> One command, four jobs
 
 | You type | bhai does |
 |---|---|
@@ -47,7 +55,11 @@ Then, in any repo: `/bhai <a link or a sentence>`.
 
 <p align="center"><img src="assets/flow.svg" alt="Every input goes through one route, then the same spine: understand, reproduce, smallest fix, prove, review, gate, explain, log" width="100%"></p>
 
-## The best fix is the shortest correct one
+<p align="center"><img src="assets/demo.svg" alt="The same run in a terminal: route, the repo's merge style, the bug, a failing test, the fix, every check, and the explanation" width="100%"></p>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg"><img src="assets/divider-light.svg" alt="" width="100%"></picture>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28"> The best fix is the shortest correct one
 
 | Most AI fixes | bhai |
 |---|---|
@@ -58,7 +70,7 @@ Then, in any repo: `/bhai <a link or a sentence>`.
 | guesses | reads the real log line and database record when you have them connected (read-only) |
 | "should work" | 29 self-grill questions before and after the fix, answered from command output |
 
-## Why it doesn't break things
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="28"> Why it doesn't break things
 
 | It always | It never, without your yes |
 |---|---|
@@ -70,7 +82,7 @@ Then, in any repo: `/bhai <a link or a sentence>`.
 
 `--auto` is a one-run yes for a single PR whose gates all passed. Human reviewers, CLAs and design questions still come to you.
 
-## It explains like a friend
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" width="28"> It explains like a friend
 
 ```text
 fix/client-empty-language — draft ready, PR nahi khola
@@ -83,7 +95,9 @@ Tumhe karna hai: "haan" bolo to PR khol dun
 
 Hinglish by default, technical words in English. Write to it in another language and it answers in that one.
 
-## Where it comes from
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg"><img src="assets/divider-light.svg" alt="" width="100%"></picture>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="28"> Where it comes from
 
 The workflow inside `/bhai` is the one behind **[16 merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AANDROIDHASSAN+is%3Amerged+-user%3AANDROIDHASSAN)** in LiveKit, RealtimeSTT,
 RealtimeTTS, Piper and Mastra in October 2026, plus a production ticket flow for a voice-AI platform. Each rule exists because of
@@ -94,7 +108,7 @@ a real failure; the research behind them is in [`research.md`](skills/bhai/refer
 One Markdown file per run in `~/.bhai/runs/`: decisions, every command and its output, the diff, each gate.
 It lives outside your repo, so it can never land in a commit.
 
-## FAQ
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Brain.png" width="28"> FAQ
 
 **Will my PR get merged?** No tool can promise that; maintainers decide. bhai removes everything on your side that
 blocks a merge: conflicts, red CI, style mismatches, missing template sections, duplicates.
