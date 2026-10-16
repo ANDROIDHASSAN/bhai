@@ -15,7 +15,13 @@
 /bhai https://github.com/owner/repo        → finds a real bug, fixes it, drafts a merge-worthy PR
 /bhai ABC-123   (or a Jira/Linear/GitHub issue link)  → solves the ticket end to end
 /bhai add retry with backoff to the uploader          → just does it, properly
+/bhai status          → every open PR of yours: CI, conflicts, bot reviews, merges
+/bhai watch owner/repo  → keeps checking on a schedule you approve
 ```
+
+Run `/bhai <repo>` again later and it looks after your open PRs there first: fixes red CI caused by its change,
+merges the default branch on conflicts, answers bot reviews with tests, drafts replies to humans for you to approve,
+cleans up after merges, and only then looks for the next bug (max 2 open PRs per repo).
 
 Every route follows the same spine: **understand → reproduce → smallest fix → prove → review → gate → explain → log**.
 

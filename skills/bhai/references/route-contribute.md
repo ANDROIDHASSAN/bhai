@@ -28,7 +28,9 @@ open PR already covers it (`gh search prs --repo <r> "<keyword or #>" --state op
 
 ## 3. Fix and prove
 
-Spine steps 3–6 from `SKILL.md`, using the repo's own commands. Compare failure lists before and after when the local
+Spine steps 3–6 from `SKILL.md` with `fix-quality.md`, using the repo's own commands. Aim for the repo's own median
+PR size or smaller: one concern, the shared function not each caller, no drive-by edits. Each assertion of the new
+test must fail on the default branch on its own. Compare failure lists before and after when the local
 environment cannot run everything, and say so.
 
 ## 4. Draft, don't send

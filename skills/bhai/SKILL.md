@@ -14,12 +14,13 @@ Read `$ARGUMENTS` and pick exactly one route:
 
 | Input looks like | Route | Reference |
 |---|---|---|
-| a repository URL or `owner/repo` with no issue number | **contribute**: find a real bug, fix it, draft a PR | `references/route-contribute.md` |
+| `status`, or `watch <repo>` | **follow-up**: every open PR/issue of the user — CI, conflicts, reviews, merges | `references/route-followup.md` |
+| a repository URL or `owner/repo` with no issue number | **follow-up** first if the user has PRs there, then **contribute**: find a real bug, fix it, draft a PR | `references/route-followup.md`, `references/route-contribute.md` |
 | a ticket: Jira/Linear URL or key (`ABC-123`), GitHub issue/PR URL, or a pasted bug report | **ticket**: solve it | `references/route-ticket.md` |
 | anything else ("add dark mode", "why is this slow", an error message) | **task**: do it | `references/route-task.md` |
 
 Say the route and a one-line restatement before starting: *"Route: ticket. Symptom: X. Done when: Y."*
-If two routes fit, prefer ticket > contribute > task. If the input is empty, ask what to do (one question).
+If two routes fit, prefer ticket > follow-up > contribute > task. If the input is empty, ask what to do (one question).
 First run in a session: tell the user in 3 lines what you need from them (`references/user-contract.md`).
 
 ## 1. Every route follows the same spine
