@@ -43,7 +43,20 @@ not fixed by this".
 
 No new dependency, schema change, renamed public path/queue/env value, or reformatting of untouched lines without the user's yes.
 
-## 6. Prove it like a skeptic
+## 6. Shrink it, then make sure it is efficient
+
+**Shrink pass** (after the tests pass): for each added or changed line, ask whether the tests and every acceptance
+item still hold without it. Try removing it; if everything still passes and no edge case needs it, delete it.
+Repeat until nothing more can go. Then reread the diff: could an existing line be changed instead of adding one?
+
+**Efficient by default, never clever:**
+- no extra work on the hot path: no repeated I/O, network calls, allocations, or O(n²) scans where a lookup or a single pass does it;
+- reuse what is already computed or cached in scope instead of recomputing it;
+- prefer the codebase's existing fast path over a new one;
+- if the fix claims to be faster, measure before and after with the same command and quote both numbers; otherwise make no speed claim;
+- correctness and readability beat micro-optimisation: a shorter correct fix is not replaced by a longer "faster" one without a measured reason.
+
+## 7. Prove it like a skeptic
 
 1. **Base reproduces**: the same test/harness on the unfixed code shows the reported failure. A test that passes on base proves nothing.
 2. **Cases**: one per acceptance item, the normal path (must behave exactly as before), and the edges that apply: empty, null, duplicate, retry, out of order, very long, non-ASCII/another language, slow or failed network, concurrent calls.
