@@ -1,0 +1,10 @@
+{
+  "name": "bhai",
+  "version": "0.1.0",
+  "description": "One command for real engineering work: give it a repo, a ticket, or a task. It reproduces first, makes the smallest fix, proves it, and explains it so you can defend it.",
+  "author": {
+    "name": "Hassan Kazi",
+    "url": "https://github.com/ANDROIDHASSAN"
+  },
+  "license": "MIT"
+}
