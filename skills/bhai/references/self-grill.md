@@ -12,7 +12,7 @@ that would change the fix is verified, or becomes one of at most 3 questions to 
 5. Do comments say an earlier fix failed? What exactly failed?
 
 ## The evidence
-6. Is there real data (ids, logs, a recording, a failing input)? What does it show?
+6. Is there real data (ids, logs, DB records, a recording, a failing input)? What does it show? (`evidence-sources.md`: read-only, small queries, no personal data copied out)
 7. Does the real data actually show the bug, or a different one?
 8. One mechanism or several giving the same symptom? Which one did the reporter hit?
 

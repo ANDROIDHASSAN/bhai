@@ -13,7 +13,8 @@ repo and branch), **done-when** (one binary check).
 
 Number every **expected result** bullet; that is the acceptance list. Read comments newest first: a "verified, not
 fixed" comment means an earlier fix was wrong or never shipped — find out why. Pull any ids, URLs or logs from the
-text and screenshots, and fetch the real data they point to when you have access. Real data beats theory.
+text and screenshots, and fetch the real data they point to when you have access: logs (Grafana/Loki and the like)
+around the reported time and the exact database record, read-only, following `evidence-sources.md`. Real data beats theory.
 
 ## 2. Grill before code
 
