@@ -20,14 +20,15 @@ Read `$ARGUMENTS` and pick exactly one route:
 
 Say the route and a one-line restatement before starting: *"Route: ticket. Symptom: X. Done when: Y."*
 If two routes fit, prefer ticket > contribute > task. If the input is empty, ask what to do (one question).
+First run in a session: tell the user in 3 lines what you need from them (`references/user-contract.md`).
 
 ## 1. Every route follows the same spine
 
 1. **Pin** — symptom in technical words, where it shows up, and a binary *done-when*. Missing and not derivable → ask (max 3 questions).
 2. **Understand before touching** — read the repo's README/CONTRIBUTING/AGENTS.md/CLAUDE.md, find the files involved, grep **every caller** of what you will change. Say the blast radius out loud.
 3. **Reproduce** — on a fresh default branch. A failing test (or a command whose output shows the bug) before any fix. Can't reproduce → stop and report; don't guess-fix.
-4. **Smallest correct fix** — root cause, not symptom; fix the shared function, not each caller. Ladder: does it need changing at all → existing helper → stdlib → one line → minimum code.
-5. **Prove** — the repo's own lint/format/type/test commands, the new test passing, and a **negative control** (revert the fix, the test fails, restore).
+4. **Smallest correct fix** — `references/fix-quality.md`: acceptance list, is a change needed at all, classify, root cause where every caller routes through, siblings, then the ladder (nothing → existing helper → stdlib → installed dep → one line → minimum code).
+5. **Prove** — the repo's own lint/format/type/test commands, base reproduces, one case per acceptance item plus edges, a **mutation check** (break the fix, a case fails), parity on warnings.
 6. **Review yourself** — `references/review.md`. Fix what is real and in scope.
 7. **Gate** — `references/gates.md`. Nothing outward-facing without the user's yes.
 8. **Explain** — `references/explain.md`: short, plain, the format the user can paste to a reviewer.

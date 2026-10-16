@@ -29,6 +29,19 @@ Every route follows the same spine: **understand → reproduce → smallest fix 
 | follows each repo's AI-contribution policy | opens more than 2 PRs in one repo |
 | keeps the diff to the fix and its test | adds itself to your commits or PRs |
 
+## The best fix is the shortest correct one
+
+Before writing code it checks whether a change is needed at all (already fixed, config, data, a product decision),
+fixes the root cause where every caller routes through, and reuses what the codebase already has before adding
+anything. Then it proves the fix like a skeptic: the bug reproduces on the old code, one case per expected result,
+and a mutation check that breaks the fix to make sure the tests notice. [Details](skills/bhai/references/fix-quality.md).
+
+## What it needs from you
+
+A link or a sentence, your GitHub CLI logged in, and a "haan" before anything is pushed, posted or merged.
+For tickets, tracker access or the pasted ticket. If you can't explain the change to a reviewer after reading its
+summary, don't approve it. [Full list](skills/bhai/references/user-contract.md).
+
 ## It explains like a friend
 
 ```text
