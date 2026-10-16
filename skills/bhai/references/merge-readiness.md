@@ -6,13 +6,14 @@ no conflict, no red check, no style mismatch, no missing step from the repo's ow
 ## 1. Learn how this repo merges (before the fix)
 
 ```bash
-gh pr list -R <r> --state merged --limit 100 --json number,title,author,authorAssociation,additions,deletions,files,mergedBy,mergedAt,createdAt,labels,body
+gh pr list -R <r> --state merged --limit 100 --json number,title,author,additions,deletions,files,mergedBy,mergedAt,createdAt,labels,body
+gh api "repos/<r>/pulls?state=closed&per_page=100" --jq '.[] | select(.merged_at) | "\(.number) \(.author_association)"'   # author_association is only in the REST API
 git log --format='%an|%s' -200 <default-branch>            # commit subject style of the people who commit
 gh api repos/<r>/contents/.github/CODEOWNERS --jq .content | base64 -d   # who owns the files you touch (if present)
 ls .github/PULL_REQUEST_TEMPLATE* .github/workflows/ CONTRIBUTING* AGENTS.md CLAUDE.md 2>/dev/null
 ```
 Record in the run log:
-- **outsider PRs** (`authorAssociation` CONTRIBUTOR/FIRST_TIME_CONTRIBUTOR/NONE) that merged: their size, title, body
+- **outsider PRs** (`author_association` CONTRIBUTOR/FIRST_TIME_CONTRIBUTOR/NONE) that merged: their size, title, body
   length, whether they touched tests, how many commits, how long they waited. **Copy that shape**, not the maintainers'.
 - who merges which paths (and CODEOWNERS for the files you touch);
 - required pieces: PR template sections, changelog fragment, DCO sign-off, CLA bot, issue-first rule, labels;

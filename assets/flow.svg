@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="250" viewBox="0 0 860 250" role="img" aria-label="Flow: your input goes to one of four routes (contribute, ticket, task, follow-up), then through the same spine: understand, reproduce, smallest fix, prove, review, gate, explain, log.">
+<style>
+.f{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+.box{fill:#f6f8fa;stroke:#d0d7de}.tx{fill:#1f2328;font-size:13px}.mut{fill:#59636e;font-size:11.5px}
+.arrow{stroke:#8c959f;stroke-width:1.6;fill:none;marker-end:url(#a)}.spine{fill:#dafbe1;stroke:#1a7f37}
+@media (prefers-color-scheme:dark){.box{fill:#161b22;stroke:#30363d}.tx{fill:#e6edf3}.mut{fill:#8b949e}.spine{fill:#0f2a17;stroke:#3fb950}.arrow{stroke:#6e7681}}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8c959f"/></marker></defs>
+<g class="f">
+<rect x="10" y="95" width="110" height="56" rx="10" class="box"/><text x="65" y="119" text-anchor="middle" class="tx" font-weight="700">/bhai &lt;input&gt;</text><text x="65" y="137" text-anchor="middle" class="mut">link or sentence</text>
+<path d="M120 123 C150 123 150 40 180 40" class="arrow"/><path d="M120 123 C150 123 150 96 180 96" class="arrow"/><path d="M120 123 C150 123 150 152 180 152" class="arrow"/><path d="M120 123 C150 123 150 208 180 208" class="arrow"/>
+<rect x="182" y="18" width="150" height="44" rx="9" class="box"/><text x="257" y="38" text-anchor="middle" class="tx" font-weight="600">contribute</text><text x="257" y="54" text-anchor="middle" class="mut">repo link</text>
+<rect x="182" y="74" width="150" height="44" rx="9" class="box"/><text x="257" y="94" text-anchor="middle" class="tx" font-weight="600">ticket</text><text x="257" y="110" text-anchor="middle" class="mut">Jira · Linear · GitHub issue</text>
+<rect x="182" y="130" width="150" height="44" rx="9" class="box"/><text x="257" y="150" text-anchor="middle" class="tx" font-weight="600">task</text><text x="257" y="166" text-anchor="middle" class="mut">anything you say</text>
+<rect x="182" y="186" width="150" height="44" rx="9" class="box"/><text x="257" y="206" text-anchor="middle" class="tx" font-weight="600">follow-up</text><text x="257" y="222" text-anchor="middle" class="mut">status · watch</text>
+<path d="M332 40 C362 40 362 123 392 123" class="arrow"/><path d="M332 96 C362 96 362 123 392 123" class="arrow"/><path d="M332 152 C362 152 362 123 392 123" class="arrow"/><path d="M332 208 C362 208 362 123 392 123" class="arrow"/>
+<rect x="394" y="70" width="456" height="106" rx="12" class="spine"/>
+<text x="622" y="96" text-anchor="middle" class="tx" font-weight="700">the same spine, every time</text>
+<text x="622" y="124" text-anchor="middle" class="tx">understand → reproduce → smallest fix → prove</text>
+<text x="622" y="148" text-anchor="middle" class="tx">→ self-grill + review → gates → explain → log</text>
+<text x="622" y="168" text-anchor="middle" class="mut">nothing is pushed, posted or merged without your yes</text>
+</g>
+</svg>

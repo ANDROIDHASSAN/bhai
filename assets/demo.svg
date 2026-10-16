@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470" role="img" aria-label="Terminal: /bhai on a repo link. It measures the repo, reproduces a bug with a failing test, makes a 3-line fix, runs the repo's checks, reviews itself, and explains the change in Hinglish.">
+<style>
+.t{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;fill:#c9d1d9}
+.d{fill:#8b949e}.g{fill:#3fb950}.y{fill:#d29922}.b{fill:#58a6ff}.w{fill:#e6edf3;font-weight:700}
+.l{opacity:0;animation:show 16s infinite}
+@keyframes show{0%{opacity:0}3%{opacity:1}92%{opacity:1}97%{opacity:0}100%{opacity:0}}
+.ty{clip-path:inset(0 100% 0 0);animation:type 16s infinite steps(46)}
+@keyframes type{0%{clip-path:inset(0 100% 0 0)}9%{clip-path:inset(0 0 0 0)}92%{clip-path:inset(0 0 0 0)}97%,100%{clip-path:inset(0 100% 0 0)}}
+@media (prefers-reduced-motion:reduce){.l{animation:none;opacity:1}.ty{animation:none;clip-path:none}}
+</style>
+<rect width="860" height="470" rx="14" fill="#0d1117"/>
+<rect width="860" height="38" rx="14" fill="#161b22"/><rect y="24" width="860" height="14" fill="#161b22"/>
+<circle cx="24" cy="19" r="6" fill="#f85149"/><circle cx="44" cy="19" r="6" fill="#d29922"/><circle cx="64" cy="19" r="6" fill="#3fb950"/>
+<text x="430" y="24" text-anchor="middle" class="t d" font-size="13">claude</text>
+<text x="24" y="72" class="t"><tspan class="g">❯</tspan> <tspan class="ty w">/bhai https://github.com/KoljaB/RealtimeSTT</tspan></text>
+<g class="t">
+<text x="24" y="108" class="l" style="animation-delay:1.6s"><tspan class="b">route</tspan>   contribute · 0 open PRs of yours here · outsiders: 31 of 34 merged PRs</text>
+<text x="24" y="134" class="l" style="animation-delay:2.6s"><tspan class="b">style</tspan>   "fix: …" titles · median 16.5 lines · merged in ~7.4 h (median)</text>
+<text x="24" y="160" class="l" style="animation-delay:3.6s"><tspan class="b">bug</tspan>     client drops language="" → server falls back to "en"</text>
+<text x="24" y="186" class="l" style="animation-delay:4.6s"><tspan class="y">✗</tspan> test_empty_language_reaches_server   <tspan class="d">fails on master, as expected</tspan></text>
+<text x="24" y="212" class="l" style="animation-delay:5.8s"><tspan class="b">fix</tspan>     audio_recorder_client.py + its test  <tspan class="g">+32</tspan> <tspan class="y">−1</tspan>   <tspan class="d">2 files</tspan></text>
+<text x="24" y="238" class="l" style="animation-delay:6.8s"><tspan class="g">✓</tspan> new test passes · <tspan class="g">✓</tspan> repo tests · <tspan class="g">✓</tspan> negative control · <tspan class="g">✓</tspan> self-grill</text>
+<text x="24" y="264" class="l" style="animation-delay:7.8s"><tspan class="g">✓</tspan> master merged, no conflicts · <tspan class="g">✓</tspan> no secrets · <tspan class="g">✓</tspan> author: you</text>
+<text x="24" y="304" class="l w" style="animation-delay:9s">fix/client-empty-language — draft ready, PR nahi khola</text>
+<text x="24" y="330" class="l" style="animation-delay:9.6s">Bug kya tha:  client language="" bhejta hi nahi tha, server "en" pe atak jaata tha</text>
+<text x="24" y="356" class="l" style="animation-delay:10.2s">Fix kya kiya: client ab --language "" pass karta hai; server default chhua nahi</text>
+<text x="24" y="382" class="l" style="animation-delay:10.8s">Reviewer pooche to: "server default badalna breaking change hota"</text>
+<text x="24" y="420" class="l" style="animation-delay:11.6s"><tspan class="y">?</tspan> PR khol dun? <tspan class="d">(haan / nahi)</tspan></text>
+</g>
+</svg>
