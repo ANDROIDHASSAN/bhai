@@ -1,14 +1,21 @@
-# Self-review
+# Self-review, like a senior developer who reviews their own diff before anyone else sees it
 
-Use the strongest reviewer that is installed, in this order, and run only one of each kind:
+Use the strongest reviewer installed for each concern — never more than one of a kind, and in this order, each
+only once:
 
-| If installed | Use it for |
-|---|---|
-| a code-review skill or command (e.g. `/code-review`) | correctness and regressions on the diff |
-| a simplicity reviewer (e.g. ponytail review/audit) | over-engineering, needless code |
-| a review-handling skill (e.g. superpowers receiving/requesting code review) | how to act on findings |
+| Concern | Tool, if installed | Fallback (none installed) |
+|---|---|---|
+| Correctness, regressions on the diff | `/code-review` | the inline checklist below |
+| Over-engineering, needless code, a diff that's bigger than it needs to be | `/ponytail:ponytail-review` | `fix-quality.md` §5–6 (the ladder, the shrink pass) |
+| A whole-repo pass for leftover bloat (only on `tagda-build`'s bigger builds, not every small fix) | `/ponytail:ponytail-audit` | skip — not worth it for a small diff |
+| Framing the ask before requesting review, so the reviewer sees a diff that already explains itself | `/superpowers:requesting-code-review` | `pr-craft.md`'s PR-body pattern |
+| Acting on what a reviewer (bot or tool) comes back with — verify technically, don't just agree or flip-flop | `/superpowers:receiving-code-review` | the "act on findings" rule below, unchanged |
+| How the review itself gets reported back (terse, no padding) | `/caveman` | `explain.md`'s own format is already terse; don't also pad it |
 
-None installed → do it inline with this checklist:
+A senior developer's habit either way: the smallest diff that is still obviously correct, not the cleverest one —
+`fix-quality.md`'s ladder and shrink pass exist for exactly this, whether or not `ponytail` is installed to check it.
+
+None of the above installed → do it inline with this checklist:
 
 - Does the new test fail on the default branch, **each assertion on its own**?
 - Is every caller of the changed function still correct? Any other call site with the same bug?
