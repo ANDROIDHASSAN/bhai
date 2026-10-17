@@ -42,7 +42,7 @@ environment cannot run everything, and say so.
 
 ## 4. Draft, don't send
 
-- Branch `fix/<short-name>` from the fresh default branch; one commit per logical change, in the repo's title style.
+- You should already be on `fix/<short-name>` (branched before step 3, per `SKILL.md` step 3). If `git branch --show-current` says otherwise, stop and fix that before writing another line — moving a commit off the default branch after the fact is extra, avoidable work. One commit per logical change, in the repo's title style.
 - Write the PR body in the repo's measured style: problem with a reproduction, the fix, tests run (quoted), scope.
 - Run `merge-readiness.md` §2–3 (local CI, fresh merge of the default branch, re-search for duplicates).
 - Show the user the explanation (`explain.md`) and the PR draft. Open it only after their yes — or, in `--auto` mode,

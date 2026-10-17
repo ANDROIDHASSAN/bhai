@@ -74,3 +74,26 @@ Repeat until nothing more can go. Then reread the diff: could an existing line b
 6. **Writes run twice**: for every write, counter or side effect on the path, ask what a retry, a duplicate event or a re-submit does. `+=`, append and read-then-set are not idempotent.
 7. **Fakes follow the real rules**: a mock must keep the real event order and return values, or the test checks the mock.
 8. A surprising result → suspect the check first.
+
+## 8. Failure modes measured on free-tier backends — check for these specifically
+
+A weaker model running this skill tends to fail in the same few ways. Before the final report, check for each:
+
+- **Committed on the default branch.** `git branch --show-current` — if it's `main`/`master`/`trunk`, the branch step
+  (`SKILL.md` step 3) was skipped. Don't just branch now and leave the mistake; if a commit already landed on the
+  default branch, move it: `git branch fix/<name> <sha>`, then `git reset --hard <sha before it>` on the default
+  branch, then continue on the new branch.
+- **The diff drifted past the fix.** Deleted comments, collapsed blank lines, reordered imports, "cleaned up" a
+  function you didn't need to touch — `git diff <base> --stat` catches the file list, but also skim the actual diff
+  for hunks that aren't the fix or its test. Revert them.
+- **A claim with no command behind it.** "Tested on a Mac, served the model successfully", "version bumped",
+  "committed locally" — each of these must be something `git log -1`, `git diff`, or the actual test run shows in
+  this session's own output. If you can't point to the command, the claim doesn't go in the report.
+- **Scratch files left behind.** Debug scripts, throwaway test files outside the repo's test directory, log files —
+  `git status --short` should show only the intended fix and test files (plus anything the repo's own tooling
+  creates, like a release-note fragment). Delete the rest.
+- **The "fix" makes failures silent instead of visible.** Wrapping a call in `try/except` to avoid a crash is not a
+  fix unless you also checked what happens to the caller: if the except branch now silently drops data, returns a
+  wrong-but-plausible result, or skips work the user asked for, that's worse than the crash. Prefer fixing the root
+  cause so the call succeeds for a real reason, or make the failure visible (a clear error, a logged warning) —
+  don't trade a loud bug for a quiet one.

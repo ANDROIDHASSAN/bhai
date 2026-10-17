@@ -35,7 +35,7 @@ that gate (e.g. "next: read the repo's AI policy; if it forbids AI PRs, I stop t
 
 1. **Pin** — symptom in technical words, where it shows up, and a binary *done-when*. Missing and not derivable → ask (max 3 questions).
 2. **Understand before touching** — read the repo's README/CONTRIBUTING/AGENTS.md/CLAUDE.md, find the files involved, grep **every caller** of what you will change. Say the blast radius out loud. Then **self-grill** questions 1–18 (`references/self-grill.md`).
-3. **Reproduce** — on a fresh default branch. A failing test (or a command whose output shows the bug) before any fix. Can't reproduce → stop and report; don't guess-fix.
+3. **Branch, then reproduce** — `git switch -c fix/<short-name>` (or `feat/...`) from a freshly pulled default branch **before editing or writing anything**, including scratch/debug scripts. `git branch --show-current` must never print `main`/`master`/`trunk` again this run. Then: a failing test (or a command whose output shows the bug) before any fix. Can't reproduce → stop and report; don't guess-fix.
 4. **Smallest correct fix** — `references/fix-quality.md`: acceptance list, is a change needed at all, classify, root cause where every caller routes through, siblings, then the ladder (nothing → existing helper → stdlib → installed dep → one line → minimum code).
 5. **Prove** — the repo's own lint/format/type/test commands, base reproduces, one case per acceptance item plus edges, a **mutation check** (break the fix, a case fails), parity on warnings.
 6. **Review yourself** — the full self-grill again (all 29, answered from this run's output), then `references/review.md`. Fix what is real and in scope. PRs follow `references/pr-craft.md`; why each rule exists is in `references/research.md`.
@@ -46,9 +46,9 @@ that gate (e.g. "next: read the repo's AI policy; if it forbids AI PRs, I stop t
 ## 2. Hard rules (all routes)
 
 - Never push, open a PR, comment, merge, deploy, force-push, delete, or add a dependency without the user's explicit yes in this session.
-- Never push to the default branch (main/master), even when the user asks, and never list it as an option. The only route is a branch + PR.
-- Never edit version files, lockfiles, changelogs or another project's `AGENTS.md`/`CLAUDE.md` unless the repo's own merged PRs show it is expected.
-- Never claim a number, a "fails on main", or a "tests pass" that did not come from a command you ran in this session.
+- Never commit or push to the default branch (main/master), even when the user asks, and never list it as an option. The only route is a branch + PR — branch first, before the first edit.
+- Never edit version files, lockfiles, changelogs or another project's `AGENTS.md`/`CLAUDE.md` unless the repo's own merged PRs show it is expected. Before the final report, `git diff <base> --stat` must show only the fix and its test (and a changelog fragment/version bump only where the repo's own rules require it). Anything else in that stat — a lockfile, reformatted untouched lines, a scratch/debug script — gets `git checkout --`'d or deleted before you report done, not left for the reviewer to notice.
+- Never claim a number, a "fails on main", a "tests pass", or "committed" that did not come from a command you ran in this session — quote the command and its real output, not just the conclusion. "I verified X" with no command shown is the same as not having verified it.
 - Never put promotion ("made with bhai") in commits, PRs or comments.
 - Commits and PRs carry only the user's identity; add no assistant co-author or footer unless the user asks.
 - Follow the repo's AI-contribution policy. If it forbids AI-generated PRs, do not prepare one; say why.

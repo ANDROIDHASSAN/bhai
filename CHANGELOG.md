@@ -14,3 +14,4 @@
 - Captured lessons from the first real run, a bug found in KoljaB/stream2sentence.
 - Added Claude plugin evaluation cases and fixed issues identified by them.
 - Introduced a guide for managing low credit situations.
+- Hardened the contribute route against failure modes measured on free-tier backends: branch before the first edit (never commit on the default branch), a stricter "only this change" gate that catches stray lockfiles, reformatting and scratch files, and a rule against turning a loud bug into a silent one.
