@@ -26,6 +26,10 @@ Record in the run log:
 Read every workflow in `.github/workflows/` that triggers on `pull_request`. Run the same commands locally (same tool
 versions where the workflow pins them): lint, format, type check, tests, docs build, license/header checks.
 A step you cannot run locally (secrets, GPU, OS) → say so in the run log and in the PR body's test section.
+Run tests the way the repo's own release script or CI does (same working directory and entry point), and confirm the
+import resolves to the checkout: `python -c "import <pkg>; print(<pkg>.__file__)"`. A stale installed copy can shadow
+the checkout from another directory and make dozens of tests fail for no real reason. Pass file lists to commands
+explicitly; some shells (zsh) don't split a `$VAR` into several arguments.
 
 ## 3. Right before opening
 

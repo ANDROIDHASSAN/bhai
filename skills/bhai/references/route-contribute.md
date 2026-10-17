@@ -25,8 +25,13 @@ Stop and report (no PR) if any of these hold:
 2. Open issues with a reproduction, no linked PR, no assignee, no "I'll take this" comment.
 3. Code reading **only as a lead**: it becomes a candidate after a runnable reproduction shows a user-visible wrong result.
 
+A cheap, strong way to find bugs: a property probe. Feed many inputs (several languages, emoji, numbers, URLs,
+abbreviations, empty) through the public API under every documented option, chunked whole, one character at a time and
+randomly, and assert invariants: nothing lost or duplicated, same output however the input is chunked, docs match
+behaviour. Then reproduce each violation with the smallest input.
+
 Reject a candidate when the current behaviour is documented (docstring, comment, test), is a design question, or an
-open PR already covers it (`gh search prs --repo <r> "<keyword or #>" --state open`).
+open PR already covers it. When README and docstrings disagree, that is a design question too: issue, not PR (`gh search prs --repo <r> "<keyword or #>" --state open`).
 
 ## 3. Fix and prove
 
