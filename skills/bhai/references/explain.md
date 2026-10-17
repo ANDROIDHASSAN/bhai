@@ -18,6 +18,9 @@ Reviewer pooche to: <one line the user can say, e.g. why not fix it in the calle
 Tumhe karna hai: <only what the user must do, or "kuch nahi">
 ```
 
+In `tagda fix` mode, add one more line before "Tumhe karna hai": `Hardened: <which of the §8 checks you ran and
+confirmed — branch, diff-clean, claims-backed, no-silent-failure — in a few words, not four separate lines>`.
+
 ## Rules
 
 - Lead with the result, then the reason. No preamble, no recap of the conversation.

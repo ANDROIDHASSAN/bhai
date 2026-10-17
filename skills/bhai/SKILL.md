@@ -1,6 +1,6 @@
 ---
 name: bhai
-description: "One command for real engineering work in any codebase. `/bhai <repo link>` finds a real bug in that repo and prepares a merge-worthy PR; `/bhai <ticket link or key>` (Jira, Linear, GitHub issue) solves the ticket end to end; `/bhai <anything else>` does the task. Every route reproduces before it fixes, makes the smallest correct change, proves it with the repo's own checks, reviews itself, and ends with a short plain-language explanation (Hinglish by default). Use when the user types /bhai, says 'bhai', pastes a repo/ticket link and wants it handled, or asks to fix, solve, contribute, or explain."
+description: "One command for real engineering work in any codebase. `/bhai <repo link>` finds a real bug in that repo and prepares a merge-worthy PR; `/bhai <ticket link or key>` (Jira, Linear, GitHub issue) solves the ticket end to end; `/bhai <anything else>` does the task. `/tagda fix <repo link, ticket, or anything>` (or saying 'tagda fix') runs the same routing with the hardened failure-mode checklist made mandatory and reported, not optional. Every route reproduces before it fixes, makes the smallest correct change, proves it with the repo's own checks, reviews itself, and ends with a short plain-language explanation (Hinglish by default). Use when the user types /bhai or /tagda fix, says 'bhai' or 'tagda fix', pastes a repo/ticket link and wants it handled, or asks to fix, solve, contribute, or explain."
 ---
 
 # bhai
@@ -18,6 +18,13 @@ Read `$ARGUMENTS` and pick exactly one route:
 | a repository URL or `owner/repo` with no issue number | **follow-up** first if the user has PRs there, then **contribute**: find a real bug, fix it, draft a PR | `references/route-followup.md`, `references/route-contribute.md` |
 | a ticket: Jira/Linear URL or key (`ABC-123`), GitHub issue/PR URL, or a pasted bug report | **ticket**: solve it | `references/route-ticket.md` |
 | anything else ("add dark mode", "why is this slow", an error message) | **task**: do it | `references/route-task.md` |
+
+**`tagda fix` is a modifier, not a fifth route.** `/tagda fix <...>` or "bhai, tagda fix kar de" means: strip the
+"tagda fix" words, route the rest exactly as above, and run it with the hardened checklist (`references/fix-quality.md`
+§8 — branch before the first edit, diff holds only the fix and its test, every claim backed by a command,
+no trading a loud bug for a silent one) treated as **mandatory gates**, not best-effort — if any one of them would
+fail, stop and say which one rather than reporting done. The route line gains a mode tag: *"Route: contribute ·
+mode: tagda fix · symptom: X · done when: Y"*, and `explain.md`'s Proof line names the hardened checks that passed.
 
 **The first line of every reply is the route line**, even when you are blocked or only answering a question:
 *"Route: ticket · symptom: X · done when: Y"*.
