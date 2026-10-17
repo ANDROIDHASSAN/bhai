@@ -6,8 +6,21 @@ description: "bhai's hardened mode for open-source contribution only. `/tagda-co
 # tagda-commit
 
 `/bhai <repo link>`'s contribute route, run strict, and only that route — for when the ask is specifically open-source
-contribution, not a ticket or a from-scratch build. If the input isn't a repo link or `owner/repo`, say so and point
-to `/bhai` (routes anything) or `tagda-fix` (hardened, any route) instead.
+contribution, not a ticket or a from-scratch build.
+
+## 0. No repo given? Ask, don't guess or stall
+
+`/tagda-commit` alone, or with something that isn't a repo link/`owner/repo` (a language, a domain, "kuch bhi",
+nothing at all) — **ask one short question, then wait**:
+
+- Already have a repo in mind? Give the link or `owner/repo`.
+- Otherwise: what kind — a language, a domain (voice/ML/web/CLI...), or "koi bhi achi OSS repo" — and whether to
+  pick from repos already forked/checked out in this workspace (if any exist here) or search fresh on GitHub for
+  one with real outsider-PR merge activity.
+
+Never silently pick a repo on your own and never run the route until the user answers. If the input genuinely isn't
+asking for a contribution at all (a ticket, a from-scratch idea, a plain question), say so and point to `/bhai`,
+`tagda-build`, or `tagda-explain` instead of asking the repo question.
 
 ## How to run it
 

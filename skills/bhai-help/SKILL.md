@@ -30,6 +30,9 @@ Sibling skills (same spine, different scope or pass):
   /tagda-explain <...>  explain-only, no code change, every claim checked
                          against the actual code — not capped at 5-10 lines
                          when the question genuinely needs more
+  /tagda-research <...> goes beyond this codebase — papers, docs, real
+                         articles, more than one source — every finding
+                         names where it came from, no code change
   /bhai-status          the status/follow-up route alone, no repo name needed
   /bhai-audit <repo>    scans for real, unclaimed bugs and reports them —
                          finds candidates, fixes nothing, opens nothing
