@@ -32,7 +32,14 @@ working) before moving to the next piece, same as `/bhai`'s reproduce-then-fix d
 to reproduce, so the "before" state is simply "doesn't exist yet, and the test says so." Wire the pieces together
 only once each one is proven alone.
 
-## 4. Hardened gates — mandatory, not a self-review pass
+## 4. Review it like a peer would, before the hardened gates
+
+Once it's built and proven piece by piece, step back and read the whole thing as a reviewer would, not just the
+pieces as you wrote them: `../bhai/skills/bhai/references/self-grill.md` (all 29, answered from what you actually
+ran) and `../bhai/skills/bhai/references/review.md`. Fix what's real and in scope now, before the hardened gates
+below — a peer review that happens after the gates is a peer review that gets skipped under time pressure.
+
+## 5. Hardened gates — mandatory, not a self-review pass
 
 Checked before the final report, same four as every `tagda-*` skill:
 - `git branch --show-current` is not `main`/`master`/`trunk` (existing repo) or the project has its own clean
@@ -45,7 +52,7 @@ Checked before the final report, same four as every `tagda-*` skill:
 
 If any of these would fail, **stop and say which one** rather than reporting it done.
 
-## 5. Explain and stop before anything outward-facing
+## 6. Explain and stop before anything outward-facing
 
 Route line: *"Route: task · mode: tagda build · symptom: X · done when: Y"*. `../bhai/skills/bhai/references/explain.md`'s
 format, plus the `Hardened:` line. Push, a new repo going public, or anything else outward-facing still needs the

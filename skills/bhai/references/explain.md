@@ -18,7 +18,7 @@ Reviewer pooche to: <one line the user can say, e.g. why not fix it in the calle
 Tumhe karna hai: <only what the user must do, or "kuch nahi">
 ```
 
-In `tagda fix` mode, add one more line before "Tumhe karna hai": `Hardened: <which of the §8 checks you ran and
+In any `tagda-*` skill, add one more line before "Tumhe karna hai": `Hardened: <which of the §8 checks you ran and
 confirmed — branch, diff-clean, claims-backed, no-silent-failure — in a few words, not four separate lines>`.
 
 ## Rules
@@ -27,6 +27,9 @@ confirmed — branch, diff-clean, claims-backed, no-silent-failure — in a few 
 - One concrete example beats an abstraction ("`'आप कैसे हो'` lost its full stop").
 - Say plainly what was not verified. Never say "should work".
 - An analogy only when the concept is new to the user, and only one.
+- **Hinglish is a language match, not a simplification.** The same depth, the same technical precision, the same
+  willingness to name an edge case — in Hinglish words instead of English ones. A Hinglish reply that leaves out
+  something an English reply would have said is a worse explanation, not a friendlier one.
 
 ## Example
 
