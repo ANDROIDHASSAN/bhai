@@ -107,7 +107,7 @@ Hinglish by default, technical words in English. Write to it in another language
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="28"> Where it comes from
 
-The workflow inside `/bhai` is the one behind **[16 merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AANDROIDHASSAN+is%3Amerged+-user%3AANDROIDHASSAN)** in LiveKit, RealtimeSTT,
+The workflow inside `/bhai` is the one behind **[15 merged pull requests](https://github.com/pulls?q=is%3Apr+author%3AANDROIDHASSAN+is%3Amerged+-user%3AANDROIDHASSAN)** in LiveKit, RealtimeSTT,
 RealtimeTTS, Piper and Mastra in October 2026, plus a production ticket flow for a voice-AI platform. Each rule exists because of
 a real failure; the research behind them is in [`research.md`](skills/bhai/references/research.md).
 
