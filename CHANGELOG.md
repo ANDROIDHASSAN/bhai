@@ -16,3 +16,4 @@
 - Introduced a guide for managing low credit situations.
 - Hardened the contribute route against failure modes measured on free-tier backends: branch before the first edit (never commit on the default branch), a stricter "only this change" gate that catches stray lockfiles, reformatting and scratch files, and a rule against turning a loud bug into a silent one.
 - Added `tagdafix` as its own skill (`/tagdafix`): the same routing as `/bhai`, with that hardened checklist made a mandatory gate instead of a self-check, reported in the route line and explanation.
+- Added three more single-purpose sibling skills: `bhai-status` (the follow-up route alone, no repo name needed), `bhai-audit` (scans one or more repos for real, unclaimed bugs and reports a ranked list — fixes nothing, opens nothing), and `bhai-help` (a quick-reference card for every route and sibling skill).
