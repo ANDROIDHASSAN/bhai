@@ -30,4 +30,4 @@ Best bet: <repo + candidate>, because <merge speed / open slot / how solid the r
 ```
 
 No code is written, no branch created, nothing committed. If the user wants one of these built out, that's a
-separate `/bhai <repo>` or `/tagdafix <repo>` run — tell them which candidate to point it at.
+separate `/bhai <repo>` or `/tagda-commit <repo>` run — tell them which candidate to point it at.

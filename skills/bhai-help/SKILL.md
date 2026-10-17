@@ -18,14 +18,19 @@ prove → review itself → gate (your yes) → explain → log.
   /bhai status · /bhai watch <repo>   health check on every open PR/issue
   /bhai <a plain question>      no code change — just the answer, 5-10 lines
 
-Sibling skills (same routing, different pass):
-  /tagdafix <...>     everything /bhai does, with the failure-mode checklist
-                       (branch-first, clean diff, proof-backed claims, no
-                       silent failures) as a mandatory gate, not a self-check
-  /bhai-status         the status/follow-up route alone, no repo name needed
-  /bhai-audit <repo>   scans for real, unclaimed bugs and reports them —
-                       finds candidates, fixes nothing, opens nothing
-  /bhai-help           this card
+Sibling skills (same spine, different scope or pass):
+  /tagda-fix <...>      everything /bhai does, with the failure-mode checklist
+                         (branch-first, clean diff, proof-backed claims, no
+                         silent failures) as a mandatory gate, not a self-check
+  /tagda-commit <repo>  tagda-fix, narrowed to open-source contribution only,
+                         ends at a clean local commit ready for your yes
+  /tagda-explain <...>  explain-only, no code change, every claim checked
+                         against the actual code — not capped at 5-10 lines
+                         when the question genuinely needs more
+  /bhai-status          the status/follow-up route alone, no repo name needed
+  /bhai-audit <repo>    scans for real, unclaimed bugs and reports them —
+                         finds candidates, fixes nothing, opens nothing
+  /bhai-help            this card
 
 Hard rules, always: never pushes, opens a PR, comments, or merges without your
 explicit yes in this session; never touches the default branch; your identity

@@ -1,9 +1,9 @@
 ---
-name: tagdafix
-description: "bhai's hardened mode. `/tagdafix <repo link>` finds a real bug and prepares a merge-worthy PR; `/tagdafix <ticket link or key>` solves the ticket end to end; `/tagdafix <anything else>` does the task — exactly like /bhai, except the failure-mode checklist (branch before the first edit, diff holds only the fix and its test, every claim backed by a command, no trading a loud bug for a silent one) is a mandatory gate instead of a self-check, and the reply names which checks ran. Use when the user types /tagdafix, says 'tagda fix', 'tagda fix kar de', or asks for a solid/robust/hardened fix, a ticket, or a task — and wants bhai's extra-strict pass, not the regular one."
+name: tagda-fix
+description: "bhai's hardened mode — any route. `/tagda-fix <repo link>` finds a real bug and prepares a merge-worthy PR; `/tagda-fix <ticket link or key>` solves the ticket end to end; `/tagda-fix <anything else>` does the task — exactly like /bhai, except the failure-mode checklist (branch before the first edit, diff holds only the fix and its test, every claim backed by a command, no trading a loud bug for a silent one) is a mandatory gate instead of a self-check, and the reply names which checks ran. For open-source contribution specifically, prefer the narrower `tagda-commit` sibling. Use when the user types /tagda-fix, says 'tagda fix', 'tagda fix kar de', or asks for a solid/robust/hardened fix, a ticket, or a task — and wants bhai's extra-strict pass, not the regular one."
 ---
 
-# tagdafix
+# tagda-fix
 
 `/bhai` run strict. Same engineer, same routing, same spine — this skill just refuses to let four specific mistakes
 slide, because they are the ones measured to actually happen on a fast or distracted pass:
@@ -38,4 +38,5 @@ slide, because they are the ones measured to actually happen on a fast or distra
 ## When not to reach for this
 
 If the task is read-only (status, a question, exploring a repo) there is nothing to harden — just load `/bhai`
-directly; `tagdafix`'s extra gates only bite once there is a diff to check.
+directly; `tagda-fix`'s extra gates only bite once there is a diff to check. Open-source contribution specifically
+→ `tagda-commit`. A question with no code change → `tagda-explain`.
