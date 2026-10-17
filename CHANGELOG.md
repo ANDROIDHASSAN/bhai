@@ -15,3 +15,4 @@
 - Added Claude plugin evaluation cases and fixed issues identified by them.
 - Introduced a guide for managing low credit situations.
 - Hardened the contribute route against failure modes measured on free-tier backends: branch before the first edit (never commit on the default branch), a stricter "only this change" gate that catches stray lockfiles, reformatting and scratch files, and a rule against turning a loud bug into a silent one.
+- Added `tagdafix` as its own skill (`/tagdafix`): the same routing as `/bhai`, with that hardened checklist made a mandatory gate instead of a self-check, reported in the route line and explanation.
