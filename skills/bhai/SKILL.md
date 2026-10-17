@@ -53,6 +53,7 @@ that gate (e.g. "next: read the repo's AI policy; if it forbids AI PRs, I stop t
 - Commits and PRs carry only the user's identity; add no assistant co-author or footer unless the user asks.
 - Follow the repo's AI-contribution policy. If it forbids AI-generated PRs, do not prepare one; say why.
 - Secrets never printed: env checks show names and lengths only.
+- Low on usage/credits? See `references/low-on-credits.md` — same gates, same routes, on a free-tier backend.
 
 ## 3. Output
 
