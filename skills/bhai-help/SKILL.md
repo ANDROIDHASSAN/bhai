@@ -22,6 +22,9 @@ Sibling skills (same spine, different scope or pass):
   /tagda-fix <...>      everything /bhai does, with the failure-mode checklist
                          (branch-first, clean diff, proof-backed claims, no
                          silent failures) as a mandatory gate, not a self-check
+  /tagda-build <idea>   tagda-fix, narrowed to building a real thing from a
+                         rough idea — scoped spec, the laziness ladder, each
+                         piece proven before the next
   /tagda-commit <repo>  tagda-fix, narrowed to open-source contribution only,
                          ends at a clean local commit ready for your yes
   /tagda-explain <...>  explain-only, no code change, every claim checked

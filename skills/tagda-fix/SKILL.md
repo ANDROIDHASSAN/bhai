@@ -39,4 +39,5 @@ slide, because they are the ones measured to actually happen on a fast or distra
 
 If the task is read-only (status, a question, exploring a repo) there is nothing to harden — just load `/bhai`
 directly; `tagda-fix`'s extra gates only bite once there is a diff to check. Open-source contribution specifically
-→ `tagda-commit`. A question with no code change → `tagda-explain`.
+→ `tagda-commit`. A question with no code change → `tagda-explain`. Building a real thing from a rough idea,
+not a small change to existing code → `tagda-build`.
