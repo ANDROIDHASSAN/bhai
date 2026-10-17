@@ -11,6 +11,6 @@
 - Enabled reading logs and databases for evidence-based decision-making, with read-only access.
 - Completely rewrote the README with a new logo, demo, flow diagram, and FAQ.
 - Updated the README with a chat hero, typing banner, animated dividers, and section emojis.
-- Captured lessons from the initial real run, including stream-to-sentence functionality.
+- Captured lessons from the first real run, a bug found in KoljaB/stream2sentence.
 - Added Claude plugin evaluation cases and fixed issues identified by them.
 - Introduced a guide for managing low credit situations.
