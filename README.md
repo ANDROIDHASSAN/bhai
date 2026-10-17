@@ -92,14 +92,14 @@ more than one source, every finding sourced), `/bhai-status` (health check on yo
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" width="28"> It explains like a friend
 
-```text
-fix/client-empty-language — draft ready, PR nahi khola
-Bug kya tha: client language="" bhejta hi nahi tha, server "en" pe atak jaata tha
-Fix kya kiya: client ab --language "" pass karta hai; server ka default chhua nahi
-Proof: naya test master pe fail hua, fix ke baad pass; repo ke tests green
-Reviewer pooche to: "server default badalna breaking change hota, isliye client side fix kiya"
-Tumhe karna hai: "haan" bolo to PR khol dun
-```
+| | |
+|---|---|
+| **Branch** | `fix/client-empty-language` — draft ready, PR nahi khola |
+| **Bug kya tha** | client `language=""` bhejta hi nahi tha, server `"en"` pe atak jaata tha |
+| **Fix kya kiya** | client ab `--language ""` pass karta hai; server ka default chhua nahi |
+| **Proof** | naya test `master` pe fail hua, fix ke baad pass; repo ke tests green |
+| **Reviewer pooche to** | "server default badalna breaking change hota, isliye client side fix kiya" |
+| **Tumhe karna hai** | "haan" bolo to PR khol dun |
 
 Hinglish by default, technical words in English. Write to it in another language and it answers in that one.
 
