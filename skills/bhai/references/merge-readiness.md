@@ -15,6 +15,10 @@ ls .github/PULL_REQUEST_TEMPLATE* .github/workflows/ CONTRIBUTING* AGENTS.md CLA
 Record in the run log:
 - **outsider PRs** (`author_association` CONTRIBUTOR/FIRST_TIME_CONTRIBUTOR/NONE) that merged: their size, title, body
   length, whether they touched tests, how many commits, how long they waited. **Copy that shape**, not the maintainers'.
+- Code-level style, not just PR shape: `git log -p` (or `gh pr diff <n>`) on 3–5 merged PRs **from different past
+  contributors**, specifically in the file(s) you're about to touch — naming, error-handling idiom, how tests are
+  structured, how similar functions are already written nearby. Match what's already there before writing anything
+  new; a fix that reads like it was always part of the file needs no separate style pass later.
 - who merges which paths (and CODEOWNERS for the files you touch);
 - required pieces: PR template sections, changelog fragment, DCO sign-off, CLA bot, issue-first rule, labels;
 - the maintainers' own words in CONTRIBUTING, the PR template, and recent review comments on outsider PRs
