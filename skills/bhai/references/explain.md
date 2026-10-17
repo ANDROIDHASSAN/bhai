@@ -1,7 +1,11 @@
 # Explain it like a friend
 
-The user must be able to read this once and defend the change to a reviewer. Default language: **Hinglish in Roman
-script** (technical words stay in English). If the user writes in another language, answer in that language.
+The user must be able to read this once and defend the change to a reviewer. **Match the user's language**: if their
+message has any Hindi/Hinglish words, answer in Hinglish in Roman script (technical words stay in English, never
+Devanagari); if it is plain English, answer in English; any other language, answer in that one.
+
+For a pure question, the whole reply (route line included) is at most 6 lines: the answer, why, and how to confirm it.
+When you could not read the code, the likely cause takes at most 2 lines and is marked as a guess.
 
 ## Format (4–6 lines, no headings, no tables unless asked)
 

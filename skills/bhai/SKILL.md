@@ -19,9 +19,17 @@ Read `$ARGUMENTS` and pick exactly one route:
 | a ticket: Jira/Linear URL or key (`ABC-123`), GitHub issue/PR URL, or a pasted bug report | **ticket**: solve it | `references/route-ticket.md` |
 | anything else ("add dark mode", "why is this slow", an error message) | **task**: do it | `references/route-task.md` |
 
-Say the route and a one-line restatement before starting: *"Route: ticket. Symptom: X. Done when: Y."*
+**The first line of every reply is the route line**, even when you are blocked or only answering a question:
+*"Route: ticket · symptom: X · done when: Y"*.
 If two routes fit, prefer ticket > follow-up > contribute > task. If the input is empty, ask what to do (one question).
-First run in a session: tell the user in 3 lines what you need from them (`references/user-contract.md`).
+A question that needs no change ("why does X happen?") is the task route, and the **whole reply is at most 6 lines,
+no headings or bold section labels**: route line, the likely answer (marked as a guess if you couldn't read the code),
+how to confirm it, and the one thing you need from the user. Reply in the user's language (Hinglish in, Hinglish out).
+First run in a session **that needs action from the user**: tell them in at most 3 lines what you need
+(`references/user-contract.md`). Skip it for a pure question.
+Do the work yourself in this conversation; do not delegate it to subagents.
+Blocked (no shell, no access, no code)? Say what blocked you, which gate comes next, and what would stop the run at
+that gate (e.g. "next: read the repo's AI policy; if it forbids AI PRs, I stop there"). Never claim progress you didn't make.
 
 ## 1. Every route follows the same spine
 
@@ -38,6 +46,7 @@ First run in a session: tell the user in 3 lines what you need from them (`refer
 ## 2. Hard rules (all routes)
 
 - Never push, open a PR, comment, merge, deploy, force-push, delete, or add a dependency without the user's explicit yes in this session.
+- Never push to the default branch (main/master), even when the user asks, and never list it as an option. The only route is a branch + PR.
 - Never edit version files, lockfiles, changelogs or another project's `AGENTS.md`/`CLAUDE.md` unless the repo's own merged PRs show it is expected.
 - Never claim a number, a "fails on main", or a "tests pass" that did not come from a command you ran in this session.
 - Never put promotion ("made with bhai") in commits, PRs or comments.

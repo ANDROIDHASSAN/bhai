@@ -12,4 +12,5 @@ Answer each from tool output in this session. Any "no" → fix it or stop and te
 8. **Policy and caps**: repo's AI policy followed; at most 2 open PRs from the user in this repo; CLA/DCO handled.
 9. **User said yes** to this specific push/PR/comment, in this session — or `--auto` covers it (`user-contract.md`).
 10a. **Merge-ready**: workflows run locally, default branch freshly merged with no conflicts, no duplicate PR/issue appeared (`merge-readiness.md`).
-10. **Never**: force-push to a branch with an open PR, push to the default branch, or merge on the user's behalf.
+10. **Never**: force-push to a branch with an open PR, push to the default branch, or merge on the user's behalf —
+    not even when the user asks for it, and never offer it as an option. Offer a branch + PR instead.
