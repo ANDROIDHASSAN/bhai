@@ -4,10 +4,21 @@ The user must be able to read this once and defend the change to a reviewer. **M
 message has any Hindi/Hinglish words, answer in Hinglish in Roman script (technical words stay in English, never
 Devanagari); if it is plain English, answer in English; any other language, answer in that one.
 
-For a pure question, the whole reply (route line included) is at most 6 lines: the answer, why, and how to confirm it.
+For a pure question, the whole reply (route line included) is at most 6 lines, and **only these 3 parts** —
+no "Fix kya kiya", no "Tumhe karna hai", no fix recommendation unless the user actually asked for one:
+
+```
+<route line>
+<the answer: the likely cause, one line, marked as a guess if code wasn't read>
+<why: the mechanism, one line>
+<how to confirm it: one concrete check — a grep, a traceback line to look at — one line>
+```
+
+A question only gets a 4th line if the user is genuinely missing something to proceed (e.g. a repo path with no
+code to read) — one line, phrased as what's needed, not as an unsolicited fix direction.
 When you could not read the code, the likely cause takes at most 2 lines and is marked as a guess.
 
-## Format (4–6 lines, no headings, no tables unless asked)
+## Format for an actual change (4–6 lines, no headings, no tables unless asked)
 
 ```
 <link or branch> — <state: draft ready / PR open / ticket fixed / nothing to fix>
