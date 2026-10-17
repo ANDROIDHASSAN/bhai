@@ -30,7 +30,7 @@
 <p align="center"><sub>Chat and terminal are illustrations built from a real merged fix, <a href="https://github.com/KoljaB/RealtimeSTT/pull/332">RealtimeSTT #332</a>, with that repo's measured numbers.</sub></p>
 
 <p align="center">
-  <a href="#-install">Install</a> · <a href="#-one-command-four-jobs">What it does</a> · <a href="#-the-best-fix-is-the-shortest-correct-one">The fix</a> · <a href="#-why-it-doesnt-break-things">Safety</a> · <a href="#-faq">FAQ</a>
+  <a href="#-install">Install</a> · <a href="#-one-command-five-jobs">What it does</a> · <a href="#-the-best-fix-is-the-shortest-correct-one">The fix</a> · <a href="#-why-it-doesnt-break-things">Safety</a> · <a href="#-faq">FAQ</a>
 </p>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg"><img src="assets/divider-light.svg" alt="" width="100%"></picture>
@@ -44,13 +44,14 @@ claude plugin install bhai@bhai
 
 Then, in any repo: `/bhai <a link or a sentence>`.
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="28"> One command, four jobs
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="28"> One command, five jobs
 
 | You type | bhai does |
 |---|---|
-| `/bhai https://github.com/owner/repo` | learns how that repo merges, finds a real bug, reproduces it with a failing test, fixes it, drafts a PR in the repo's own style |
+| `/bhai add retry with backoff to the uploader` | builds it from scratch, the same careful way: understands the codebase first, smallest working change, proves it |
 | `/bhai ABC-123` · a Jira/Linear/GitHub issue link | reads the whole ticket (comments, screenshots, logs if connected), finds the root cause and its siblings, fixes and proves it |
-| `/bhai add retry with backoff to the uploader` | just does it, the same careful way |
+| `/bhai https://github.com/owner/repo` | learns how that repo merges, finds a real bug, reproduces it with a failing test, fixes it, drafts a PR in the repo's own style |
+| `/bhai why is this slow?` · any plain question | no code changes — just the answer in 5–10 lines, in words you'd use with a friend, marked clearly if it's a guess |
 | `/bhai status` · `/bhai watch owner/repo` | looks after your open PRs: red CI, conflicts, bot reviews, merges, then the next bug |
 
 <p align="center"><img src="assets/flow.svg" alt="Every input goes through one route, then the same spine: understand, reproduce, smallest fix, prove, review, gate, explain, log" width="100%"></p>
