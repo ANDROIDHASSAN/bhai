@@ -85,7 +85,7 @@ more than one source, every finding sourced), `/bhai-status` (health check on yo
 | reproduces before it fixes | pushes, opens a PR, comments, merges or deploys |
 | runs the repo's own lint, type and test commands, and its CI workflows locally | force-pushes, adds a dependency, or edits lockfiles and versions |
 | merges the default branch right before opening a PR, so there are no conflicts | claims a number it didn't measure |
-| follows each repo's AI-contribution policy, and stops where it forbids AI PRs | opens more than 2 PRs in one repo |
+| follows each repo's AI-contribution policy, and stops where it forbids AI PRs | opens another PR in a repo before the open ones there have had time to be reviewed |
 | keeps the diff to the fix and its test | puts itself in your commits or PRs |
 
 `--auto` is a one-run yes for a single PR whose gates all passed. Human reviewers, CLAs and design questions still come to you.
@@ -121,8 +121,9 @@ It lives outside your repo, so it can never land in a commit.
 **Will my PR get merged?** No tool can promise that; maintainers decide. bhai removes everything on your side that
 blocks a merge: conflicts, red CI, style mismatches, missing template sections, duplicates.
 
-**Is this an AI-PR spam machine?** The opposite. It refuses repos that ban AI PRs, caps you at 2 open PRs per repo,
-never pings maintainers, and won't open a PR you can't explain. Read the [gates](skills/bhai/references/gates.md).
+**Is this an AI-PR spam machine?** The opposite. It refuses repos that ban AI PRs, never piles a second PR onto a
+repo faster than that repo can actually review, never pings maintainers, and won't open a PR you can't explain.
+Read the [gates](skills/bhai/references/gates.md).
 
 **What does it need from me?** A link or a sentence, `gh` logged in, and a "haan" before anything leaves your machine.
 [Full list](skills/bhai/references/user-contract.md).
