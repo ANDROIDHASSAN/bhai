@@ -44,12 +44,18 @@ claude plugin install bhai@bhai
 
 Then, in any repo: `/bhai <a link or a sentence>`.
 
-Sibling skills, same install: `/tagda-fix <...>` (hardened checklist, mandatory not optional), `/tagda-build <idea>`
-(same hardening, for building a real thing from scratch), `/tagda-commit <repo>` (same hardening, open-source
-contribution only — asks which repo, or what kind, if you don't name one), `/tagda-explain <...>` (verified
-explanation, no code change), `/tagda-research <...>` (goes beyond this codebase — papers, docs, real articles,
-more than one source, every finding sourced), `/bhai-status` (health check on your open PRs, no repo name needed),
-`/bhai-audit <repo>` (finds candidates, fixes nothing), `/bhai-help` (this list, from inside Claude Code).
+Sibling skills, same install:
+
+| Skill | Hardened? | For |
+|---|---|---|
+| `/tagda-fix <...>` | ✅ mandatory, not optional | any route — a repo, a ticket, a task |
+| `/tagda-build <idea>` | ✅ same hardening | building a real thing from scratch |
+| `/tagda-commit <repo>` | ✅ same hardening | open-source contribution only — asks which repo, or what kind, if you don't name one |
+| `/tagda-explain <...>` | — | verified explanation, no code change |
+| `/tagda-research <...>` | — | goes beyond this codebase — papers, docs, real articles, more than one source, every finding sourced |
+| `/bhai-status` | — | health check on your open PRs, no repo name needed |
+| `/bhai-audit <repo>` | — | finds candidates, fixes nothing |
+| `/bhai-help` | — | this list, from inside Claude Code |
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="28"> One command, five jobs
 
